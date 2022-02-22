@@ -1,10 +1,10 @@
-const API = process.env.API;
-const API_time = process.env.API_time;
-const API_forecast = process.env.API_forecast;
+const API = 'http://api.openweathermap.org/data/2.5/weather?';
+const API_time = 'https://api.openweathermap.org/data/2.5/onecall/timemachine?';
+const API_forecast = 'https://api.openweathermap.org/data/2.5/onecall?';
 const API_key = process.env.API_key;
-const lang = process.env.lang;
-const units = process.env.units;
-const exclude = process.env.exclude;
+const lang = 'es';
+const units = 'metric';
+const exclude = 'current,hourly,minutely';
 
 var key 
 export const Position = async (lat, lon) =>{
