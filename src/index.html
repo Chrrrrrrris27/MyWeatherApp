@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación del Clima</title>
+</head>
+<body>
+    <div class="content">
+    <header>
+        <div class="container_title">
+            <h1>¿Cómo está el clima hoy?</h1>
+        </div>
+        <div class="social">
+            <a href="https://github.com/Chrrrrrrris27/MyWeatherApp" target="_blank" >
+                <img src="./assets/icons/github.png" alt="github" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/christian-aguilar-a79731224" target="_blank">
+                <img src="./assets/icons/linkedin.png" class="icon" alt="linkedin">
+            </a>
+            <a href="#" target="_blank">
+                <img src="./assets/icons/portfolio.png" alt="portfolio" class="icon">
+            </a>
+        </div>
+    </header>
+    <main class="app">
+        <div id="historical" class="historical historical-off">
+            <div class="lastday l1">
+                <section  class="first-info">
+                    <div class="lastday-info">
+                        <h3 id="lastday1" class="day"></h3>
+                        <h3 id="temp1" class="temp"></h3>
+                    </div>
+                    <h3 id="lastdate1" class="lastdate"></h3>
+                </section>
+                <hr class="break-line">
+                <section class="second-info">
+                    <img id="lasticon1" src="" alt="weather">
+                    <h3 id="weather1"></h3>
+                </section>
+            </div>
+            <div class="lastday l2">
+                <section class="first-info"> 
+                    <div class="lastday-info">
+                        <h3 id="lastday2" class="day"></h3>
+                        <h3 id="temp2" class="temp"></h3>
+                    </div>
+                    <h3 id="lastdate2" class="lastdate"></h3>
+                </section>
+                <hr class="break-line">
+                <section class="second-info">
+                    <img id="lasticon2" src="" alt="weather">
+                    <h3 id="weather2"></h3>
+                </section>
+            </div>
+            <div class="lastday l3">
+                <section class="first-info">
+                    <div class="lastday-info">
+                        <h3 id="lastday3" class="day"></h3>
+                        <h3 id="temp3" class="temp"></h3>
+                    </div>
+                    <h3 id="lastdate3" class="lastdate"></h3>
+                </section>
+                <hr class="break-line">
+                <section class="second-info">
+                    <img id="lasticon3" src="" alt="weather">
+                    <h3 id="weather3"></h3>
+                </section>
+            </div>
+        </div>
+        <div id="button-his" class="button b1">
+            <div class="arrow"></div>
+            <h3>Histórico</h3>
+        </div>
+        <div id="button-curr-l" class="button b1 display-none">
+            <div class="arrow"></div>
+            <h3>Hoy</h3>
+        </div>
+        <div id="button-curr-r" class="button b2 display-none">
+            <h3>Hoy</h3>
+            <div class="arrow"></div>
+        </div>
+        <div id="current-info" class="current-info current-info-on">
+            <section class="first-info">
+                <h2 id="location" class="location"></h2>
+                <hr class="break-line">
+                <h3 id="presentday" class="presentday"></h3>
+                <div class="first-weather">
+                    <h3 id="temp" class="temp"></h3>
+                    <img id="currenticon" src="" alt="weather" class="current-icon">
+                </div>
+            </section>
+            <div class="container-weather">
+                <h3 id="weather" class="current-weather"></h3>
+            </div>
+            <section class="second-info">
+                <img src="./assets/icons/sensation.svg" alt="sensación" class="second-icon">
+                <h3 id="feels"></h3>
+                <img src="./assets/icons/pressure.svg" alt="presión" class="second-icon">
+                <h3 id="press"></h3>
+                <img src="./assets/icons/humidity.svg" alt="humedad" class="second-icon">
+                <h3 id="humedity"></h3>
+                <img src="./assets/icons/speed.svg" alt="velocidad" class="second-icon">
+                <h3 id="speed-w"></h3>
+            </section>
+        </div>
+        <div id="button-for" class="button b2">
+            <h3>Pronóstico</h3>
+            <div class="arrow"></div>
+        </div>
+        <div id="forecast" class="forecast forecast-off">
+            <div class="nextday n1">
+                <section class="first-info">
+                    <div class="nextday-info">
+                        <h3 id="nextday1" class="nextday-day"></h3>
+                        <div class="max-min">
+                            <h3 id="nexttmax1"></h3>
+                            <h3 id="nexttmin1"></h3>
+                        </div>
+                    </div>
+                    <h3 id="nextdate1" class="nextdate"></h3>
+                </section>
+                <hr class="break-line">
+                <section class="second-info">
+                    <img id="nexticon1" src="" alt="weather">
+                    <h3 id="nextweather1"></h3>
+                </section>
+            </div>
+            <div class="nextday n2">
+                <section class="first-info">
+                    <div class="nextday-info">
+                        <h3 id="nextday2" class="nextday-day"></h3>
+                        <div class="max-min">
+                            <h3 id="nexttmax2"></h3>
+                            <h3 id="nexttmin2"></h3>
+                        </div>
+                    </div>
+                    <h3 id="nextdate2" class="nextdate"></h3>
+                </section>
+                <hr class="break-line">
+                <section class="second-info">
+                    <img id="nexticon2" src="" alt="weather">
+                    <h3 id="nextweather2"></h3>
+                </section>
+            </div>
+            <div class="nextday n3">
+                <section class="first-info">
+                    <div class="nextday-info">
+                        <h3 id="nextday3" class="nextday-day"></h3>
+                        <div class="max-min">
+                            <h3 id="nexttmax3"></h3>
+                            <h3 id="nexttmin3"></h3>
+                        </div>
+                    </div>
+                    <h3 id="nextdate3" class="nextdate"></h3>
+                </section>
+                <hr class="break-line">
+                <section class="second-info">
+                    <img id="nexticon3" src="" alt="weather">
+                    <h3 id="nextweather3"></h3>
+                </section>
+            </div>
+        </div>
+        <form id="search">
+            <label for="city">Quieres ver el clima de otra ciudad</label>
+            <a href="#city">
+                <img src="./assets/icons/search.svg" id="search-icon" alt="search" class="search-icon">
+            </a>
+            <input id="city" name="city" placeholder="Busca otra ciudad!" class="input-text">
+            <input type="submit" value="Buscar" class="input-submit">
+        </form>
+    </main>
+    <footer>
+        <h2>Desarrollado por <a href="#">Christian Aguilar</a> 2021</h2>
+        <h2>API: <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></h2>
+    </footer>
+    </div>
+</body>
+</html>

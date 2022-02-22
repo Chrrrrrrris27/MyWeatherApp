@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'Noto Sans regular';
+    src: url('../assets/fonts/noto_sans_regular.woff2') format('woff2'),
+        url('../assets/fonts/noto_sans_regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans bold';
+    src: url('../assets/fonts/noto_sans_700.woff2') format('woff2'),
+        url('../assets/fonts/noto_sans_700.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #CCF;
+    font-family: 'Noto Sans regular';
+}
+.content{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    display: flex;
+}
+.button{
+    display: none;
+    width: 2rem;
+    margin-top: 50%;
+    position: absolute;
+    align-items: center;
+    background-color: #14145C;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+.arrow{
+    box-sizing: border-box;
+    border-top: 9px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 9px solid #CCF;
+    border-bottom: 9px solid transparent;
+}
+.button h3{
+    margin: 10% 0;
+    color: #CCF;
+    font-size: 1rem;
+    text-align: center;
+    writing-mode: vertical-lr;
+}
+.b1 h3{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.b2{
+    right: 0;
+}
+.b2 .arrow{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.button:active{
+    transform: scale(0.85);
+}
+.button:active h3{
+    color: #DEC96A;
+}
+.button:active .arrow{
+    border-right: 9px solid #DEC96A;
+}
+.container_title{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #333;
+    color: #CCF;
+    border-radius: 0px 0px 75px 75px;
+}
+h1{
+    font-size: 2rem;
+    text-align: center;
+}
+.social{
+    padding-top: 0.5%;
+    padding-right: 1%;
+}
+.app{
+    margin: 3% 0 0;
+    display: grid;
+    grid-template: auto auto /repeat(3,1fr);
+    grid-row-gap: 5%;
+    justify-content: space-around;
+}
+.current-info{
+    width: 65%;
+    height: auto;
+    padding-bottom: 3%;
+    background-color: #14145C;
+    justify-self: center;
+    border-radius: 5px;
+    box-shadow: 0px 15px 10px -4px #003;
+}
+.first-info{
+    margin-top: 3%;
+    color: #DEC96A;
+}
+.current-icon{
+    width: 25%;
+}
+.historical, .forecast{
+    display: grid;
+    grid-template: repeat(3,auto)/auto;
+    grid-row-gap: 5%;
+}
+.lastday, .nextday{
+    width: 45%;
+    background-color: #14145C;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px 4px #003;
+}
+.lastday:hover, .nextday:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+.lastday-info, .nextday-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lastday-info h3, .nextday-day{
+    font-size: 1.5rem;
+}
+.day, .nextday-day{
+    margin-left: 7%;
+}
+.temp, .max-min{
+    margin-right: 7%;
+}
+.lastdate, .nextdate{
+    margin-left: 7%;
+    font-size: 1rem;
+}
+.max-min h3{
+    font-size: 0.9rem;
+}
+.l1{
+    margin-left: 20%;
+}
+.l2{
+    margin-left: 45%;
+}
+.l3{
+    margin-left: 20%;
+}
+.n1{
+    margin-left: 35%;
+}
+.n2{
+    margin-left: 10%;
+}
+.n3{
+    margin-left: 35%;
+}
+.current-info .second-info{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2%;
+    background-color: #DEC96A;
+    display: grid;
+    grid-template: repeat(4,1fr)/auto auto;
+    align-items: center;
+    border-radius: 5px 0px 5px 5px;
+    color: #333;
+    box-shadow: inset 0px 0px 7px 1px #CCF;
+}
+.second-icon{
+    justify-self: center;
+}
+.location{
+    margin-bottom: 3%;
+    font-size: 3rem;
+    text-align: center;
+}
+.presentday{
+    font-size: 1rem;
+    text-align: center;
+}
+.temp{
+    font-size: 2.5rem;
+}
+.first-weather{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-weather{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: end;    
+}
+.current-weather{
+    display: inline-block;
+    background-color: #CCF;
+    margin-top: 5%;
+    padding: 0 1%;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 3px 3px 0px 3px;
+    color: #333;
+}
+.lastday .second-info, .nextday .second-info{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    color: #DEC96A;
+    text-transform: capitalize;
+    align-items: flex-end;
+}
+.second-info h3{
+    font-size: 1rem;
+}
+.break-line{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #917E29;
+}
+a{
+    text-decoration: none;
+}
+.icon:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+form{
+    margin-bottom: 2%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+}
+form a{
+    height: 3rem;
+}
+.search-icon{
+    background-color: #52525C;
+    border-right: 2px solid #CCF;
+    border-radius: 5px 0px 0px 5px;
+    height: 100%;
+    box-shadow: 0px 10px 10px -4px #333;
+}
+label{
+    display: none;
+}
+input{
+    appearance: none;
+}
+.input-text{
+    width: 80%;
+    padding-left: 1.5%;
+    line-height: 3rem;
+    background: #52525C;
+    color: #DEC96A;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0px 10px 10px -4px #333;
+}
+.input-text::placeholder{
+    padding-left: 1.5%;
+    color: #CCF;
+}
+.input-text:focus {
+    border: none;
+    outline: none;
+    box-shadow: inset 0px 0px 4px 1px #CCF;
+}
+.input-submit{
+    margin-left: 4%;
+    line-height: 3rem;
+    padding: 0 1%;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: #52525C;
+    color: #CCF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px -4px #333;
+}
+.input-submit:hover{
+    color: #DEC96A;
+}
+.input-submit:active{
+    transform: scale(0.85);
+}
+footer{
+    background-color: #333;
+    color: #CCF;
+    text-align: center;
+}
+footer h2{
+    font-size: 1rem;
+}
+footer a{
+    color: #CCF;
+}
+footer a:hover{
+    color: #DEC96A;
+}
+.off-r{
+    position: absolute;
+    opacity: 0;
+    transform: translateX(120%);
+    transition: 1s ease-out;
+}
+.off-l{
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-120%);
+    transition: 1s ease-out;
+}
+.on-r{
+    position: relative;
+    left: 0%;
+    transition: 1s ease-in;
+}
+.on-l{
+    position: relative;
+    right: 0%;
+    transition: 1s ease-in;
+}
